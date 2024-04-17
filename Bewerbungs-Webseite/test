@@ -1,0 +1,222 @@
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons');
+const nextButton = document.getElementById('next-btn');
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+const questions = [
+    {
+        question: 'Welche Schule habe ich besucht?',
+        answers: [
+            { text: 'Coppernicus-Gymnasium', correct: true },
+            { text: 'Harksheide-Gymnasium', correct: false },
+            { text: 'Lessing-Gymnasium', correct: false },
+            { text: 'Heidberg-Gymnasium', correct: false },
+        ]
+    },
+    {
+        question: 'Was sind meine Muttersprachen?',
+        answers: [
+            { text: 'Kurdisch und Arabisch', correct: false },
+            { text: 'Deutsch und Arabisch', correct: false },
+            { text: 'Kurdisch und Deutsch', correct: true },
+            { text: 'Englisch und Arabisch', correct: false },
+        ]
+    },
+    {
+        question: 'In welchen Programmiersprachen habe ich Erfahrung?',
+        answers: [
+            { text: 'CSS, HTML, Java', correct: false },
+            { text: 'CSS, HTML, JavaScript', correct: true },
+            { text: 'Python, HTML, CSS', correct: false },
+            { text: 'Gar keine', correct: false },
+        ]
+    },
+    {
+        question: 'Wie heiße ich?',
+        answers: [
+            { text: 'Damian', correct: false },
+            { text: 'Dennis', correct: false },
+            { text: 'Dario', correct: false },
+            { text: 'Daryoush', correct: true },
+        ]
+    },
+    {
+        question: 'Wie wahrscheinlich ist es, dass sie mich einstellen?',
+        answers: [
+            { text: 'Ja!', correct: true },
+            { text: 'Eher unwahrscheinlich', correct: false },
+            { text: 'Wahrscheinlich', correct: false },
+            { text: 'Nein', correct: false },
+        ]
+    }
+];
+
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        // Hier können Sie eine Funktion aufrufen, um das Quiz zu beenden oder das Ergebnis anzuzeigen.
+        console.log('Quiz beendet');
+    }
+});
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = 'Next';
+    showQuestion();
+}
+
+function showQuestion() {
+    resetState();
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.innerText = currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        answerButtonsElement.appendChild(button);
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer);
+    });
+}
+
+function resetState() {
+    nextButton.style.display = 'none';
+    while (answerButtonsElement.firstChild) {
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild);
+    }
+}
+
+function selectAnswer(e) {
+    const selectedButton = e.target;
+    const isCorrect = selectedButton.dataset.correct === 'true';
+    if (isCorrect) {
+        selectedButton.classList.add('correct');
+        score++; // Erhöhen Sie die Punktzahl, wenn die Antwort korrekt ist
+    } else {
+        selectedButton.classList.add('incorrect');
+    }
+    nextButton.style.display = 'block'; // Zeigen Sie die "Next" Schaltfläche nach der Auswahl einer Antwort an
+    
+}
+
+startQuiz();
+------------------------------------
+const questions = [
+    {
+        questions: 'Welche Schule habe ich besucht?',
+        answers: [
+            { Text: 'Coppernicus-Gymnasium', correct: true },
+            { Text: 'Harksheide-Gymnasium', correct: false },
+            { Text: 'Lessing-Gymnasium', correct: false },
+            { Text: 'Heidberg-Gymnasium', correct: false },
+        ]
+    },
+    {
+        questions: 'Was sind meine Muttersprachen?',
+        answers: [
+            { Text: 'Kurdisch und Arabisch', correct: false },
+            { Text: 'Deutsch und Arabisch', correct: false },
+            { Text: 'Kurdisch und Deutsch', correct: true },
+            { Text: 'Englisch und Arabisch', correct: false },
+        ]
+    },
+    {
+        questions: 'In welchen Programmiersprachen habe ich erfahrung?',
+        answers: [
+            { Text: 'CSS, HTML, Java', correct: false },
+            { Text: 'CSS, HTML, Java-script', correct: true },
+            { Text: 'python, HTML, CSS', correct: false },
+            { Text: 'gar keine', correct: false },
+        ]
+    },
+    {
+        questions: 'Wie heiße ich?',
+        answers: [
+            { Text: 'Damian', correct: false },
+            { Text: 'Dennis', correct: false },
+            { Text: 'Dario', correct: false },
+            { Text: 'Daryoush', correct: true },
+        ]
+    },
+    {
+        questions: 'Wie wahrscheinlich ist es, dass sie mich einstellen?',
+        answers: [
+            { Text: 'Ja!', correct: true },
+            { Text: 'Eher unwahrscheinlich', correct: false },
+            { Text: 'Wahrscheinlich', correct: false },
+            { Text: 'Nein', correct: false },
+        ]
+    },
+
+];
+
+const questionElement = document.getElementById('question');
+const answerButton = document.getElementById('answer-buttons');
+const nextButton = document.getElementById('next-btn');
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz(){
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = 'next';
+    showQuestion();
+}
+function showQuestion(){
+    resetState();
+    let currentQuestion = questions [currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + '. ' + currentQuestion. 
+    question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerHTML = answer.Text;
+        button.classList.add('btn');
+        answerButton.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer);
+    });
+}
+
+
+function resetState() {
+    nextButton.style.display = 'none';
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+
+function selectAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === 'true';
+    if(isCorrect){
+        selectedBtn.classList.add('correct');
+    }else{
+        selectedBtn.classList.add('incorrect');
+    }
+    Array.from(answerButton.children).forEach(button => {
+        if(button.dataset.correct === 'true'){
+            button.classList.add('correct');
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = 'block';
+        
+}
+
+
+
+
+startQuiz();

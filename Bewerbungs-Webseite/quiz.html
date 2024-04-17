@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz zu Daryoush</title>
+
+    <style>
+
+        body{
+            background-color: antiquewhite;
+        }
+        .app{
+            width: 90%;
+            background-color: #fff;
+            max-width: 600px;
+            margin: 100px auto 0;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+
+        .menu-link{
+                color: black;
+                text-decoration: none;
+                margin-left: 16px;
+                border-radius: 5%;
+                transition: all 0.2s;
+        }
+
+            .menu-link:hover {
+                text-decoration: underline;
+                background-color: #b6ad047b;
+            }
+            .linksgenerell{
+                position: fixed;
+                right: 50%;
+                left: 50%;
+                top: 20px;
+                 font-size: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .app h1{
+                font-size: 25px;
+                color: #143963;
+                font-weight: 600px;
+                border-bottom: 1px solid #333;
+                padding-bottom: 30px ;
+            }
+            .quiz{
+                padding: 20px;
+            }
+            .quiz h2{
+                font-size: 18px;
+                color: #143963;
+                font-weight: 600px;
+            }
+
+
+            .btn{
+                background: #fff ;
+                color: #222;
+                font-weight: 500;
+                width: 100%;
+                border: 1px solid #222;
+                padding: 10px ;
+                margin: 10px 0px;
+                text-align: left;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .btn:hover:not([disabled]){
+                background: #222;
+                color: #fff;
+            }
+            .btn:disabled{
+                cursor: no-drop;
+            }
+            #next-btn{
+                background: #001e4d;
+                color: #fff;
+                font-weight: 500;
+                width: 150px;
+                border: 0;
+                padding: 10px;
+                margin: 20px auto 0;
+                border-radius: 4px;
+                cursor: pointer;
+                display: none;
+            }
+            .correct{
+                background: #9aeabc;
+            }
+            .incorrect{
+                background: #ff9393;
+            }
+
+
+
+
+
+
+
+    </style>
+
+
+
+</head>
+
+
+<body>
+
+
+    <div class="linksgenerell">
+        <a class="menu-link" href="http://127.0.0.1:5500/">Home</a>
+        <a class="menu-link" href="">Quiz</a> 
+        <a class="menu-link" href="http://127.0.0.1:5500/Index2.html">Anschreiben</a>
+        <a class="menu-link" href="http://127.0.0.1:5500/lebenslauf.html">Lebenslauf</a>
+    </div>
+
+    <div class="app">
+        <h1>Das habe ich erfahren</h1>
+        <div class="quiz">
+            <h2 id="question">Frage kommt hier hin</h2>
+            <div id="answer-buttons">
+                <button class="btn">answer 1</button>
+                <button class="btn">answer 2</button>
+                <button class="btn">answer 3</button>
+                <button class="btn">answer 4</button>
+            </div>     
+            <button id="next-btn">Weiter</button> 
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

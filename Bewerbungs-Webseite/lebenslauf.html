@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebenslauf</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+   
+    <style>
+        body {
+            
+            font-family: "Poppins", sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+        }
+        .left-side {
+            width: 40%;
+            height: 2000px;
+            background-color: #143963;
+            color: #ffffff;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .right-side {
+            width: 60%;
+            height: 2000px;
+            background-color: #e9e9dc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .name {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .contact-header {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .languages-header {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        .A{
+            position: absolute;
+            font-size: 300px;
+            color: rgb(167, 17, 17);
+            right: 790px;
+        }
+        .usbildung{
+            position: absolute;
+            font-size: 55px;
+            color: #143963;
+            right: 589px;
+            top: 125px;
+        }
+        .zum{
+            position: absolute;
+            font-size: 55px;
+            color: #143963;
+            right: 240px;
+            top: 200px;
+        }
+
+        .fur{
+            position: absolute;
+            font-size: 55px;
+            color: #143963;
+            right: 15px;
+            top: 290px;
+        }
+        
+        .vertical-line {
+            position: absolute;
+            border-left: 4px solid #143963; /* Farbe und Dicke der Linie anpassen */
+            height: 1500px; /* Höhe der Linie anpassen */
+            right: 900px;
+            top: 500px;
+        }
+        .farbe{
+            color: #e9e9dc;
+            background-color: #143963;
+            font-size: 35px;
+            
+        }
+
+        .platz{
+            position: absolute;
+            right: 500px;
+            top: 430px;
+            
+        }
+        .platz2{
+            position: absolute;
+            right: 519px;
+            top: 1030px;
+        }
+        .platz3{
+            position: absolute;
+            right: 550px;
+            top: 1500px;
+        }
+        .box1{
+            position: absolute;
+            background-color: #143963;
+            height: 56px;
+            width: 500px;
+            right: 320px;
+            top: 459px;
+        }
+        .box2{
+            position: absolute;
+            background-color: #143963;
+            height: 56px;
+            width: 500px;
+            right: 320px;
+            top: 1059px;
+        }
+        .box3{
+            position: absolute;
+            background-color: #143963;
+            height: 56px;
+            width: 500px;
+            right: 311px;
+            top: 1529px;
+        }
+        .koffer{
+            position: absolute;
+            background-color: #e9e9dc;
+            border-radius: 100%;
+            height: 50px;
+            width: 50px;
+            right: 879px;
+            top: 465px;
+        }
+        .box4{
+            position: absolute;
+            background-color: #143963;
+            height: 60px;
+            width: 60px;
+            right: 874px;
+            top: 460px;
+            border-radius: 100%;
+        }
+        .bildung{
+            position: absolute;
+            background-color: #e9e9dc;
+            border-radius: 100%;
+            height: 50px;
+            width: 50px;
+            right: 879px;
+            top: 1062px;
+        }
+        .box5{
+            position: absolute;
+            background-color: #143963;
+            height: 60px;
+            width: 60px;
+            right: 874px;
+            top: 1057px;
+            border-radius: 100%;
+        }
+        .fähigkeiten{
+            position: absolute;
+            background-color: #e9e9dc;
+            border-radius: 100%;
+            height: 50px;
+            width: 50px;
+            right: 878.5px;
+            top: 1532px;
+        }
+        .box6{
+            position: absolute;
+            background-color: #143963;
+            height: 60px;
+            width: 60px;
+            right: 874px;
+            top: 1527px;
+            border-radius: 100%;
+        }
+        .schrift1{
+            font-size: 30px;
+            position: absolute;
+            right: 460px;
+            top: 540px;
+        }
+        .schrift2{
+            font-size: 30px;
+            position: absolute;
+            right: 407px;
+            top: 1140px;
+        }
+        .schrift3{
+            font-size: 30px;
+            position: absolute;
+            right: 315px;
+            top: 1590px;
+        }
+        .punkt1{
+            position: absolute;
+            background-color: #143963;
+            height: 25px;
+            width: 25px;
+            right: 889px;
+            border-radius: 100%;
+        }
+        .d{
+            position: absolute;
+            font-size: 320px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            top: 400px;
+            color: rgba(237, 226, 191, 0.988);
+        }
+        .ayoush{
+            position: absolute;
+            font-size: 100px;
+            top: 790px;
+            left: 250px;
+        }
+        .a2{
+            position: absolute;
+            font-size: 220px;
+            color:rgb(167, 17, 17) ;
+            top: 650px;
+            left: 130px;
+        }
+        .hmad{
+            position: absolute;
+            font-size: 100px;
+            top: 905px;
+            left: 270px;
+        }
+        .kontakt{
+            position: absolute;
+            font-size: 80px;
+            top: 1080px;
+            left: 160px;
+        }
+        .vertical-line2{
+            position: absolute;
+            border-bottom: 4px solid #e9e9dc;
+            width: 350px;
+            top: 1260px;
+            left: 138px;
+        }  
+        .schrift4{
+            position: absolute;
+            font-size: 23px;
+            top: 1280px;
+            left: 200px;
+        }
+        .sprachen{
+            position: absolute;
+            font-size: 80px;
+            top: 1440px;
+            left: 130px;
+        }
+        .vertical-line3{
+            position: absolute;
+            border-bottom: 4px solid #e9e9dc;
+            width: 500px;
+            top: 1620px;
+            left: 75px;
+        }  
+        .schrift5{
+            position: absolute;
+            font-size: 25px;
+            top: 1630px;
+            left: 150px;
+        }
+        .telefon1{
+            position: absolute;
+            background-color: #e9e9dc;
+            border-radius: 100%;
+            height: 30px;
+            width: 30px;
+            top: 1305px;
+            left: 130px;
+        }
+        .at1{
+            position: absolute;
+            background-color: #e9e9dc;
+            border-radius: 100%;
+            height: 35px;
+            width: 35px;
+            top: 1378px;
+            left: 130px;
+        }
+        .standort1{
+            position: absolute;
+            background-color: #e9e9dc;
+            border-radius: 100%;
+            height: 35px;
+            width: 35px;
+            top: 1470px;
+            left: 130px;
+        }
+        .menu-link{
+        color: black;
+        text-decoration: none;
+        margin-left: 16px;
+        transition: all 0.2s;
+        border-radius: 5%;
+        }
+
+        .menu-link:hover {
+        text-decoration: underline;
+        background-color: #b6ad047b;
+        }
+        .linksgenerell{
+            position: fixed;
+            right: 50%;
+            left: 50%;
+            top: 20px;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+
+    
+
+    <div class="container">
+        <div class="left-side">
+           <p class="d">D</p>
+           <p class="ayoush">aryoush</p>
+           <p class="a2">A</p>
+           <p class="hmad">hmad</p>
+
+           <p class="kontakt" >Kontakt</p>
+           <div class="vertical-line2"></div>
+           <div class="vertical-line3"></div>
+            
+           <P class="schrift4">
+            +49 15254103219 <br>
+            <br>
+            Daryosh.2003@gmail.com<br>
+            <br>
+            Rathausallee 108<br>
+            22846 Norderstedt
+           </P>
+
+           <p class="sprachen">Sprachen</p>
+           <p class="schrift5">
+            Deutscht - Muttersprache <br>
+            <br>
+            Kurdisch - Muttersprache<br>
+            <br>
+            Arabisch - Fließend<br>
+            <br>
+            Englisch - Fließend 
+           </p>
+           <img class="telefon1" src="telefon.jpg" alt="">
+           <img class="at1" src="at.jpg" alt="">
+           <img class="standort1" src="standort.jpg" alt="">
+
+
+
+            
+
+        </div>
+
+        <div class="vertical-line"></div>
+
+        <div class="right-side">
+
+            
+
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box5"></div>
+            <div class="box6"></div>
+
+            <a class="A"> A </a>
+            <a class="usbildung"> usbildung</a>
+            <a class="zum"> zum Fachinformatiker</a>
+            <a class="fur"> Für Anwendungsentwicklung</a>
+            <h2 class="farbe platz"> SCHULPRAKTIKA </h2>
+            <h2 class="farbe platz2"> BILDUNGSWEG </h2>
+            <h2 class="farbe platz3"> FÄHIGKEITEN </h2>
+
+
+            <img class="koffer" src="koffer.jpg" alt="">
+            
+            <img class="bildung" src="bildung.jpg" alt="">
+
+            <img class="fähigkeiten" src="fähigkeiten.jpg" alt="">
+
+
+        <div class=" schrift1">
+            <p><strong>April/2023</strong> <br>
+                Gastronomie<br> 
+                Pico de Gallo
+            </p>
+            
+            <p><strong>April/2022</strong><br>
+                Ambulante Altenpflege
+            </p>
+
+            <p><strong>März/2019</strong><br>
+                Einzelhandelskaufmann <br>
+                Rewe
+            </p>
+
+
+        </div>  
+        
+        <div class="schrift2">
+            <p> <strong> 09/2015 - 07/2023</strong> <br>
+                Coppernicus - Gymnasium <br>
+                Hochschulreife
+            </p>
+
+            <p> <strong> 09/2013 - 07/2015</strong> <br>
+                Grundschule Heidberg
+            </p>
+
+        </div>
+
+        <div class="schrift3" style="color: #5383b9;">
+            <p><strong>
+                Teamfähigkeit <br>  
+                <br>
+                Kommunikationsfähigkeit <br>
+                <br>
+                Kundenorientiert <br>
+                <br>
+                CSS/HTML/Javascript Erfahrung
+                </strong>
+
+            </p>
+
+        </div>
+
+        <div class="punkt1" style="top: 628px;"></div>
+        <div class="punkt1" style="top: 778px;"></div>
+        <div class="punkt1" style="top: 925px;"></div>
+        <div class="punkt1" style="top: 1228px;"></div>
+        <div class="punkt1" style="top: 1378px;"></div>
+        <div class="punkt1" style="top: 1630px;"></div>
+        <div class="punkt1" style="top: 1725px;"></div>
+        <div class="punkt1" style="top: 1822px;"></div>
+        <div class="punkt1" style="top: 1920px;"></div>
+
+            
+            
+
+            
+            
+
+            
+           
+            
+    </div>
+    <div class="linksgenerell">
+        <a class="menu-link" href="http://127.0.0.1:5500/">Home</a>
+        <a class="menu-link" href="http://127.0.0.1:5500/quiz.html">Quiz</a> 
+        <a class="menu-link" href="http://127.0.0.1:5500/Index2.html">Anschreiben</a>
+        <a class="menu-link" href="http://127.0.0.1:5500/lebenslauf.html">Lebenslauf</a>
+    </div>
+    
+
+    
+</body>
+</html>
